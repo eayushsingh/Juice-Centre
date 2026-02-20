@@ -200,6 +200,36 @@ export default function Hero() {
                                 Must Try
                             </div>
                         </div>
+
+                        {/* Floating fruit cards — hide on mobile, show desktop */}
+                        <div className="hidden lg:block absolute right-[-60px] top-1/2 -translate-y-1/2 z-20">
+                            {/* Fruit card 1 */}
+                            <motion.div
+                                animate={{ y: [0, -20, 0] }}
+                                transition={{ duration: 3.5, repeat: Infinity }}
+                                className="relative w-32 h-32 md:w-36 md:h-36 rounded-3xl overflow-hidden shadow-2xl mb-6 border-4 border-white"
+                            >
+                                <Image src="/f1.png" alt="Fresh Juice" fill className="object-cover" />
+                            </motion.div>
+
+                            {/* Fruit card 2 */}
+                            <motion.div
+                                animate={{ y: [0, -15, 0] }}
+                                transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
+                                className="relative w-28 h-28 md:w-32 md:h-32 rounded-3xl overflow-hidden shadow-2xl ml-8 border-4 border-white"
+                            >
+                                <Image src="/f2.png" alt="Mulberry" fill className="object-cover" />
+                            </motion.div>
+
+                            {/* Fruit card 3 */}
+                            <motion.div
+                                animate={{ y: [0, -18, 0] }}
+                                transition={{ duration: 3.8, repeat: Infinity, delay: 1 }}
+                                className="relative w-32 h-32 md:w-36 md:h-36 rounded-3xl overflow-hidden shadow-2xl mt-4 border-4 border-white"
+                            >
+                                <Image src="/f3.png" alt="Mango" fill className="object-cover" />
+                            </motion.div>
+                        </div>
                     </div>
                 </motion.div>
             </div>

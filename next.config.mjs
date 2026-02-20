@@ -2,7 +2,9 @@
 const nextConfig = {
   images: {
     unoptimized: true,
+    formats: ['image/webp', 'image/avif'],
   },
+  compress: true,
   // Prevent hydration issues
   reactStrictMode: true,
   // Smooth client navigation
