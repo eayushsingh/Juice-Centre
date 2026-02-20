@@ -1,6 +1,7 @@
+"use client"
 import GalleryTeaser from "@/components/sections/GalleryTeaser"
 
-export const metadata = {
+const metadata = {
     title: 'Gallery | Nice Juice Centre',
     description: 'Glimpse into our world of fresh fruit juices and signature malai desserts.',
 }

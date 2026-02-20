@@ -1,6 +1,7 @@
+"use client"
 import CTABanner from "@/components/sections/CTABanner"
 
-export const metadata = {
+const metadata = {
     title: 'Contact Us | Nice Juice Centre',
     description: 'Get in touch with Nice Juice Centre for orders, inquiries, and feedback.',
 }

@@ -1,6 +1,7 @@
+"use client"
 import BranchesPreview from "@/components/sections/BranchesPreview"
 
-export const metadata = {
+const metadata = {
     title: 'Our Branches | Nice Juice Centre',
     description: 'Visit Nice Juice Centre at our 3 locations across Hyderabad — MG Road, Tolichowki, and Salarjung Colony.',
 }
