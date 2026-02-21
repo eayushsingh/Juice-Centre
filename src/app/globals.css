@@ -371,3 +371,22 @@ main {
     display: block !important;
   }
 }
+
+/* Premium mobile typography */
+@media (max-width: 640px) {
+  h1 {
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* Hero navbar clearance on mobile */
+  .hero-section,
+  section:first-of-type {
+    padding-top: 80px !important;
+  }
+}

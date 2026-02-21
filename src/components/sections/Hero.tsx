@@ -59,22 +59,32 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.1 }}
                     >
-                        <h1 className="font-display leading-[0.95] tracking-tight mb-6">
-                            <span className="block text-white text-5xl md:text-6xl lg:text-7xl font-black">
+                        <h1 className="font-display leading-[1.05] tracking-tight mb-6">
+                            <span className="block text-white
+                                            text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px]
+                                            font-black">
                                 Hyderabad's
                             </span>
-                            <span className="block text-white text-5xl md:text-6xl lg:text-7xl font-black">
+                            <span className="block text-white
+                                            text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px]
+                                            font-black">
                                 Most Loved
                             </span>
-                            <span className="block text-[#D4AF37] text-5xl md:text-6xl lg:text-7xl font-black italic">
+                            <span className="block text-[#D4AF37]
+                                            text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px]
+                                            font-black italic">
                                 Juice Centre
                             </span>
-                            <span className="block text-[#D4AF37]/70 text-4xl md:text-5xl lg:text-6xl font-black">
+                            <span className="block text-[#D4AF37]/70
+                                            text-[30px] sm:text-[40px] md:text-[50px] lg:text-[60px]
+                                            font-black">
                                 Since 1986
                             </span>
                         </h1>
 
-                        <p className="text-gray-400 text-base md:text-lg max-w-md leading-relaxed mb-8 font-body">
+                        <p className="text-gray-300
+                                     text-[15px] sm:text-[16px] md:text-[18px]
+                                     max-w-[500px] leading-relaxed mb-8 font-body">
                             Experience the authentic taste of fresh fruit creations
                             at Nice Juice Centre. Serving signature malai desserts,
                             premium milkshakes, and fresh juices for over 39 years.
@@ -83,16 +93,16 @@ export default function Hero() {
                         {/* Buttons */}
                         <div className="flex flex-wrap gap-4 mb-10">
                             <Link href="/menu"
-                                className="px-8 py-4 rounded-full font-bold
-                                           text-black text-sm tracking-wide
+                                className="px-8 py-4 rounded-full font-semibold
+                                           text-black text-[14px] sm:text-[15px] tracking-wide
                                            bg-[#D4AF37] hover:bg-[#B8960C]
                                            transition-all duration-200 shadow-lg shadow-[#D4AF37]/20
                                            hover:-translate-y-0.5 active:translate-y-0">
                                 Explore Menu
                             </Link>
                             <Link href="/branches"
-                                className="px-8 py-4 rounded-full font-bold
-                                           text-[#D4AF37] text-sm tracking-wide
+                                className="px-8 py-4 rounded-full font-semibold
+                                           text-[#D4AF37] text-[14px] sm:text-[15px] tracking-wide
                                            border-2 border-[#D4AF37]/50
                                            hover:border-[#D4AF37] hover:bg-[#D4AF37]/5
                                            transition-all duration-200

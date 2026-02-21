@@ -43,24 +43,19 @@ export default function Navbar() {
                 border: 'none',
                 borderBottom: 'none',
                 boxShadow: scrolled ? '0 1px 40px rgba(0,0,0,0.4)' : 'none',
-                height: '80px',
                 display: 'flex',
                 alignItems: 'center',
-                padding: '0 32px',
+                padding: '0 20px',
             }}
+            className="h-[64px] sm:h-[72px] md:h-[80px]"
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between w-full">
                 {/* LEFT — Logo */}
-                <Link href="/" style={{ flexShrink: 0 }}>
+                <Link href="/" className="flex items-center flex-shrink-0">
                     <img
                         src="/logo-landscape.png"
                         alt="Nice Juice Centre"
-                        style={{
-                            width: '200px',
-                            height: 'auto',
-                            display: 'block',
-                            minWidth: '200px',
-                        }}
+                        className="h-auto w-[100px] sm:w-[120px] md:w-[150px] lg:w-[180px] xl:w-[200px] block"
                     />
                 </Link>
 
