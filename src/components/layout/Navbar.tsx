@@ -53,13 +53,13 @@ export default function Navbar() {
                 {/* LEFT — Logo */}
                 <Link href="/" style={{ flexShrink: 0 }}>
                     <img
-                        src="/logo-gold.png"
+                        src="/logo-landscape.png"
                         alt="Nice Juice Centre"
                         style={{
-                            width: '160px',
+                            width: '200px',
                             height: 'auto',
                             display: 'block',
-                            minWidth: '160px',
+                            minWidth: '200px',
                         }}
                     />
                 </Link>
