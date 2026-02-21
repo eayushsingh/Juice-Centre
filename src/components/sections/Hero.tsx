@@ -19,7 +19,7 @@ export default function Hero() {
 
     return (
         <section className="relative min-h-screen bg-[#0A0A0A] overflow-hidden
-                            pt-24 pb-16 px-6 md:px-12 flex flex-col justify-center">
+                            pt-16 pb-8 px-6 md:px-12 flex flex-col justify-center">
 
             {/* ── BACKGROUND DECORATION ── */}
             <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[70%]
@@ -51,7 +51,7 @@ export default function Hero() {
                 </motion.div>
 
                 {/* Main grid — text + card side by side */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-2 items-center">
 
                     {/* LEFT — Heading */}
                     <motion.div
@@ -123,7 +123,7 @@ export default function Hero() {
                     </motion.div>
 
                     {/* RIGHT — Mulberry Malai Card */}
-                    <div className="flex justify-center lg:justify-end">
+                    <div className="flex justify-center lg:justify-end mt-0 lg:mt-0">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -132,7 +132,7 @@ export default function Hero() {
                             <motion.div
                                 animate={{ y: [0, -10, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="w-full max-w-[320px]
+                                className="w-full max-w-[280px] sm:max-w-[320px]
                                            rounded-3xl overflow-hidden
                                            border border-[#D4AF37]/20
                                            shadow-[0_32px_80px_rgba(212,175,55,0.12)]
