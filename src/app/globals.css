@@ -253,7 +253,8 @@ img[alt="Nice Juice Centre"] {
 /* Mobile size */
 @media (max-width: 768px) {
   img[alt="Nice Juice Centre"] {
-    height: 48px !important;
+    height: 56px !important;
+    filter: brightness(10) saturate(0) !important;
   }
 }
 
