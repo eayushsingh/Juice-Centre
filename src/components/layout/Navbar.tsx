@@ -43,11 +43,10 @@ export default function Navbar() {
                         src="/logo.png"
                         alt="Nice Juice Centre"
                         style={{
-                            height: '72px',
+                            height: '80px',
                             width: 'auto',
                             objectFit: 'contain',
-                            filter: 'brightness(1.2)',
-                            mixBlendMode: 'normal',
+                            mixBlendMode: 'screen',
                             background: 'transparent',
                             display: 'block',
                             transition: 'transform 0.25s ease',
