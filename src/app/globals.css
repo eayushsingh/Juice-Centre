@@ -5,21 +5,36 @@
 :root {
   --font-display: 'Fraunces', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
-  --primary: #FF6B00;
-  --secondary: #FFF3E8;
-  --accent: #1A1A1A;
-  --highlight: #22C55E;
+  --primary: #D4AF37;
+  /* Royal Gold */
+  --primary-dark: #B8960C;
+  /* Dark Gold */
+  --primary-light: #F5E6A3;
+  /* Light Gold */
+  --bg-main: #0A0A0A;
+  /* Deep Black */
+  --bg-card: #111111;
+  /* Card Black */
+  --bg-section: #161616;
+  /* Section Black */
+  --text-main: #FFFFFF;
+  /* White text */
+  --text-muted: #A0A0A0;
+  /* Grey text */
+  --accent: #D4AF37;
+  /* Gold accent */
 }
 
 html {
   scroll-behavior: smooth;
   height: 100%;
+  background-color: var(--bg-main);
 }
 
 body {
   font-family: var(--font-body);
-  background-color: #FFFDF8;
-  color: #1A1A1A;
+  background-color: var(--bg-main);
+  color: var(--text-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -36,6 +51,11 @@ h3,
   font-family: var(--font-display);
   font-weight: 900;
   letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+h1 span {
+  color: var(--primary);
 }
 
 h4,
@@ -60,23 +80,23 @@ h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFF7ED;
+  background: #0A0A0A;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #F97316;
+  background: var(--primary);
   border-radius: 20px;
-  border: 2px solid #FFF7ED;
+  border: 2px solid #0A0A0A;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #EA580C;
+  background: var(--primary-dark);
 }
 
 /* Selection Color */
 ::selection {
-  background: #FFEDD5;
-  color: #F97316;
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--primary);
 }
 
 /* Better text rendering */
@@ -86,11 +106,149 @@ h6 {
   box-sizing: border-box;
 }
 
-/* Logo background fix — all screen sizes */
-img[alt="Nice Juice Centre"] {
-  mix-blend-mode: multiply !important;
-  -webkit-mix-blend-mode: multiply !important;
+/* Navbar */
+nav {
+  background: rgba(10, 10, 10, 0.95) !important;
+  border-bottom: 1px solid var(--primary) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* All orange -> Gold */
+.text-orange-500 {
+  color: var(--primary) !important;
+}
+
+.bg-orange-500 {
+  background: var(--primary) !important;
+}
+
+.border-orange-100 {
+  border-color: rgba(212, 175, 55, 0.2) !important;
+}
+
+.text-orange-600 {
+  color: var(--primary) !important;
+}
+
+.bg-orange-100 {
+  background: rgba(212, 175, 55, 0.1) !important;
+}
+
+.shadow-orange-200 {
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.1) !important;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 8px 40px rgba(212, 175, 55, 0.2);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #D4AF37, #B8960C) !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+  border: 2px solid #D4AF37 !important;
+  color: #D4AF37 !important;
   background: transparent !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-secondary:hover {
+  background: rgba(212, 175, 55, 0.05) !important;
+  border-color: #F5E6A3 !important;
+  color: #F5E6A3 !important;
+}
+
+/* Section backgrounds alternating */
+.section-dark {
+  background: #0A0A0A;
+}
+
+.section-card {
+  background: #111111;
+}
+
+.section-deep {
+  background: #080808;
+}
+
+/* Gold dividers */
+.divider {
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+/* Stats numbers */
+.stat-num {
+  color: var(--primary);
+}
+
+/* Category pills active */
+.pill-active {
+  background: var(--primary);
+  color: #000000;
+}
+
+.pill-inactive {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--primary);
+  background: transparent;
+}
+
+/* Footer */
+footer {
+  background: #050505 !important;
+  border-top: 1px solid rgba(212, 175, 55, 0.2) !important;
+}
+
+/* Badge pill */
+.badge {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--primary);
+}
+
+/* Price tags */
+.price {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Hours text */
+.hours {
+  color: var(--primary);
+}
+
+/* Open Now badge */
+.open-badge {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--primary);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Logo background fix */
+img[alt="Nice Juice Centre"] {
+  filter: brightness(1.2);
+  mix-blend-mode: normal !important;
 }
 
 /* Mobile size */
@@ -102,14 +260,11 @@ img[alt="Nice Juice Centre"] {
 
 /* Prevent blank flash on load */
 html {
-  background-color: #FFFDF8;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
+  background-color: #0A0A0A;
 }
 
 body {
-  background-color: #FFFDF8;
+  background-color: #0A0A0A;
   opacity: 1;
   transition: opacity 0.2s ease;
 }
@@ -131,25 +286,13 @@ main {
   }
 }
 
-/* Prevent layout shift */
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-}
-
 /* ── HERO MOBILE ── */
 @media (max-width: 768px) {
-
-  /* Section padding */
   .hero-section {
     padding: 100px 20px 60px !important;
     min-height: 100svh;
   }
 
-  /* Headline */
   .hero-headline {
     font-size: 3rem !important;
     line-height: 1.08 !important;
@@ -158,154 +301,40 @@ img {
     text-align: left !important;
   }
 
-  /* Subtext */
   .hero-sub {
     font-size: 0.95rem !important;
     line-height: 1.65 !important;
-    color: #5C3D11 !important;
+    color: var(--text-muted) !important;
     max-width: 100% !important;
     margin-bottom: 28px !important;
   }
 
-  /* Buttons — stack vertically, full width, pill shaped */
-  .hero-buttons {
-    flex-direction: column !important;
-    gap: 12px !important;
-    width: 100% !important;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100% !important;
-    text-align: center !important;
-    padding: 16px 24px !important;
-    font-size: 1rem !important;
-    border-radius: 50px !important;
-    min-height: 54px !important;
-    margin: 0 !important;
-  }
-
-  /* Fruit visual area — show on mobile as horizontal scroll row */
-  .hero-visuals {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 12px !important;
-    overflow-x: auto !important;
-    scrollbar-width: none !important;
-    padding: 24px 0 12px !important;
-    margin: 0 -20px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    width: calc(100% + 40px) !important;
-  }
-
-  .hero-visuals::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Each floating fruit card becomes a horizontal chip */
   .fruit-card {
     flex-shrink: 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(17, 17, 17, 0.85);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(212, 175, 55, 0.3);
     border-radius: 20px;
     padding: 12px 18px;
     display: flex !important;
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-    box-shadow: 0 4px 20px rgba(249, 115, 22, 0.12);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.12);
     white-space: nowrap;
-    /* Remove absolute positioning on mobile */
     position: static !important;
-    animation: none !important;
-    transform: none !important;
   }
 
   .fruit-card span {
     font-size: 10px;
     font-weight: 600;
-    color: #F97316;
+    color: var(--primary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
-
-  /* Stats row */
-  .hero-stats {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    margin-top: 36px !important;
-    padding-top: 28px !important;
-    border-top: 1px solid rgba(124, 58, 16, 0.1) !important;
-    text-align: center;
-  }
-
-  .stat-num {
-    font-size: 1.7rem !important;
-  }
-
-  .stat-label {
-    font-size: 0.65rem !important;
-  }
-
-  /* Badge pill */
-  .hero-badge {
-    font-size: 0.68rem !important;
-    padding: 6px 14px !important;
-    margin-bottom: 20px !important;
-    display: inline-flex !important;
-  }
-
-  /* Hide the big decorative circle behind fruit */
-  .hero-circle {
-    width: 300px !important;
-    height: 300px !important;
-    right: -80px !important;
-    top: 20% !important;
-    opacity: 0.5;
-  }
-
-  /* 100% Natural badge */
-  .card-badge {
-    position: static !important;
-    flex-shrink: 0;
-    margin-left: auto;
-    animation: none !important;
-    background: #16A34A;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
-/* ── SMALL MOBILE 390px ── */
-@media (max-width: 390px) {
-  .hero-headline {
-    font-size: 2.6rem !important;
-  }
-}
-
-/* Mobile image optimization */
-@media (max-width: 768px) {
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Hide decorative images on mobile for speed */
-  .hidden {
-    display: none !important;
-  }
-}
-
-/* Responsive breakpoints */
+/* Responsive utilities */
 @media (min-width: 768px) {
   .md\:block {
     display: block !important;

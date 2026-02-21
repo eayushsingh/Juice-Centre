@@ -11,18 +11,18 @@ export default function CTABanner() {
 
     if (!mounted) {
         return (
-            <div style={{ height: '300px', background: '#FFFDF8' }} />
+            <div style={{ height: '300px', background: '#0A0A0A' }} />
         )
     }
     return (
-        <section className="relative py-[60px] md:py-[100px] px-[5%] bg-white overflow-hidden">
+        <section className="relative py-[60px] md:py-[100px] px-[5%] bg-[#0A0A0A] overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="max-w-7xl mx-auto relative rounded-[40px] md:rounded-[60px] p-8 md:p-20 overflow-hidden"
-                style={{ background: "linear-gradient(135deg, #F97316 0%, #EA580C 100%)" }}
+                className="max-w-7xl mx-auto relative rounded-[40px] md:rounded-[60px] p-8 md:p-20 overflow-hidden border border-[#D4AF37]/20"
+                style={{ background: "linear-gradient(135deg, #111111 0%, #0A0A0A 100%)" }}
             >
                 {/* Abstract shapes */}
                 <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[150%] bg-white/10 rounded-full blur-[80px] rotate-12 pointer-events-none" />
@@ -41,7 +41,7 @@ export default function CTABanner() {
                     <div className="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto font-body">
                         <a
                             href="tel:+918639271639"
-                            className="w-full lg:w-auto px-10 py-4 md:py-5 bg-white text-orange-600 rounded-3xl font-bold text-base md:text-lg transition-all shadow-2xl hover:bg-slate-50 hover:-translate-y-1 active:translate-y-0 text-center min-h-[56px] flex items-center justify-center"
+                            className="w-full lg:w-auto px-10 py-4 md:py-5 bg-[#D4AF37] text-black rounded-3xl font-bold text-base md:text-lg transition-all shadow-2xl hover:bg-[#B8960C] hover:-translate-y-1 active:translate-y-0 text-center min-h-[56px] flex items-center justify-center"
                         >
                             📞 Call Now
                         </a>

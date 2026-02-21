@@ -26,13 +26,13 @@ export default function Navbar() {
     }, [])
 
     if (!mounted) return (
-        <nav className="fixed top-0 left-0 right-0 h-20 bg-[#FFFDF8] z-50 px-6 md:px-10" />
+        <nav className="fixed top-0 left-0 right-0 h-20 bg-[#0A0A0A] z-50 px-6 md:px-10" />
     )
 
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-10 ${scrolled
-                ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-orange-100"
+                ? "bg-[#0A0A0A]/95 backdrop-blur-md shadow-sm border-b border-[#D4AF37]"
                 : "bg-transparent"
                 }`}
         >
@@ -46,8 +46,8 @@ export default function Navbar() {
                             height: '72px',
                             width: 'auto',
                             objectFit: 'contain',
-                            mixBlendMode: 'multiply',
-                            WebkitMixBlendMode: 'multiply',
+                            filter: 'brightness(1.2)',
+                            mixBlendMode: 'normal',
                             background: 'transparent',
                             display: 'block',
                             transition: 'transform 0.25s ease',
@@ -58,7 +58,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* CENTER — Nav links (desktop only) */}
-                <div className="hidden md:flex items-center gap-1 bg-white/50 backdrop-blur-sm p-1 rounded-full border border-orange-50/50 shadow-sm font-body">
+                <div className="hidden md:flex items-center gap-1 bg-white/5 backdrop-blur-sm p-1 rounded-full border border-white/10 shadow-sm font-body">
                     {links.map((l) => {
                         const isActive = pathname === l.href
                         return (
@@ -66,8 +66,8 @@ export default function Navbar() {
                                 key={l.href}
                                 href={l.href}
                                 className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-200 ${isActive
-                                    ? "bg-orange-500 text-white shadow-md shadow-orange-200"
-                                    : "text-slate-600 hover:text-orange-500 hover:bg-orange-50/50"
+                                    ? "bg-[#D4AF37] text-black shadow-md shadow-[#D4AF37]/20"
+                                    : "text-white/80 hover:text-[#D4AF37] hover:bg-white/5"
                                     }`}
                             >
                                 {l.label}
@@ -85,7 +85,7 @@ export default function Navbar() {
                         <span>📞 Order Now</span>
                     </a>
                     <button
-                        className="md:hidden relative z-[60] p-2 text-3xl text-slate-800 transition-colors active:scale-95 min-h-[44px] min-w-[44px] flex items-center justify-center"
+                        className="md:hidden relative z-[60] p-2 text-3xl text-white transition-colors active:scale-95 min-h-[44px] min-w-[44px] flex items-center justify-center"
                         onClick={() => setOpen(!open)}
                         aria-label={open ? "Close menu" : "Open menu"}
                     >
@@ -102,7 +102,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed inset-0 z-50 bg-white"
+                        className="fixed inset-0 z-50 bg-[#0A0A0A]"
                     >
                         <div className="flex flex-col h-full pt-32 pb-12 px-[8%]">
                             <div className="flex flex-col gap-4 flex-1">
@@ -116,9 +116,9 @@ export default function Navbar() {
                                         <Link
                                             href={l.href}
                                             onClick={() => setOpen(false)}
-                                            className={`block text-[clamp(1.5rem,5vw,2rem)] font-display font-bold py-4 border-b border-slate-50 transition-colors ${pathname === l.href
-                                                ? "text-orange-500"
-                                                : "text-slate-800 active:text-orange-500"
+                                            className={`block text-[clamp(1.5rem,5vw,2rem)] font-display font-bold py-4 border-b border-white/5 transition-colors ${pathname === l.href
+                                                ? "text-[#D4AF37]"
+                                                : "text-white active:text-[#D4AF37]"
                                                 }`}
                                         >
                                             {l.label}

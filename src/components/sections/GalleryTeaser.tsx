@@ -15,16 +15,16 @@ export default function GalleryTeaser() {
 
     if (!mounted) {
         return (
-            <div style={{ minHeight: '600px', background: '#FFFDF8' }} />
+            <div style={{ minHeight: '600px', background: '#050505' }} />
         )
     }
     return (
-        <section className="relative py-[60px] md:py-[100px] px-[5%] bg-[#FFFDF8] overflow-hidden">
+        <section className="relative py-[60px] md:py-[100px] px-[5%] bg-[#050505] overflow-hidden">
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-12 md:mb-16">
-                    <span className="text-orange-500 font-bold tracking-[.3em] uppercase text-[10px] md:text-xs mb-3 md:mb-4 block font-body">Visual Treats</span>
-                    <h2 className="text-[clamp(2.4rem,8vw,5rem)] md:text-6xl font-display font-extrabold text-slate-900 leading-[1.1] tracking-tight">
-                        Vibrant & <span className="text-orange-500">Appetizing.</span>
+                    <span className="text-[#D4AF37] font-bold tracking-[.3em] uppercase text-[10px] md:text-xs mb-3 md:mb-4 block font-body">Visual Treats</span>
+                    <h2 className="text-[clamp(2.4rem,8vw,5rem)] md:text-6xl font-display font-extrabold text-white leading-[1.1] tracking-tight">
+                        Vibrant & <span className="text-[#D4AF37]">Appetizing.</span>
                     </h2>
                 </div>
 
@@ -37,7 +37,7 @@ export default function GalleryTeaser() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: i * 0.1 }}
-                            className="relative aspect-square rounded-[30px] md:rounded-[40px] overflow-hidden group border-2 md:border-4 border-white shadow-xl"
+                            className="relative aspect-square rounded-[30px] md:rounded-[40px] overflow-hidden group border-2 md:border-4 border-white/5 shadow-xl"
                         >
                             <Image
                                 src={item.image}
@@ -58,7 +58,7 @@ export default function GalleryTeaser() {
                 <div className="mt-12 md:mt-16 text-center">
                     <Link
                         href="/gallery"
-                        className="inline-flex items-center gap-2 text-slate-900 font-bold hover:text-orange-500 transition-all text-base md:text-lg group min-h-[44px] font-body"
+                        className="inline-flex items-center gap-2 text-white font-bold hover:text-[#D4AF37] transition-all text-base md:text-lg group min-h-[44px] font-body"
                     >
                         View Full Gallery <span className="group-hover:translate-x-2 transition-transform">📸</span>
                     </Link>

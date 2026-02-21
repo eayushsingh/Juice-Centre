@@ -6,20 +6,20 @@ import Image from "next/image"
 import { menuItems, menuCategories, MenuCategory } from "@/data/menu"
 
 const categoryConfig: Record<string, { emoji: string; color: string; bg: string }> = {
-    "Everything": { emoji: "🌟", color: "#FF6B00", bg: "#FFF3E8" },
-    "Fresh Fruit Juices": { emoji: "🍊", color: "#F97316", bg: "#FFF7ED" },
-    "Milkshakes": { emoji: "🥛", color: "#EA580C", bg: "#FFF7ED" },
-    "Signature Malai Desserts": { emoji: "🍓", color: "#DB2777", bg: "#FDF2F8" },
-    "Fruit Cream Specials": { emoji: "🍇", color: "#8B5CF6", bg: "#F5F3FF" },
-    "Seasonal Specials": { emoji: "🥭", color: "#F59E0B", bg: "#FFFBEB" },
-    "Dry Fruit Cream": { emoji: "✨", color: "#CA8A04", bg: "#FEFCE8" },
-    "Dry Fruit Shakes": { emoji: "🌰", color: "#92400E", bg: "#FEF3C7" },
-    "Mocktails": { emoji: "🍹", color: "#0891B2", bg: "#ECFEFF" },
-    "Nice Spl": { emoji: "⭐", color: "#F97316", bg: "#FFF7ED" },
-    "Lassi": { emoji: "🥛", color: "#F97316", bg: "#FFF7ED" },
-    "Chat": { emoji: "🍿", color: "#C2410C", bg: "#FFF7ED" },
-    "Grill Sandwich": { emoji: "🥪", color: "#92400E", bg: "#FEF3C7" },
-    "Shawarma": { emoji: "🌯", color: "#16A34A", bg: "#F0FDF4" },
+    "Everything": { emoji: "🌟", color: "#D4AF37", bg: "#111111" },
+    "Fresh Fruit Juices": { emoji: "🍊", color: "#D4AF37", bg: "#111111" },
+    "Milkshakes": { emoji: "🥛", color: "#D4AF37", bg: "#111111" },
+    "Signature Malai Desserts": { emoji: "🍓", color: "#D4AF37", bg: "#111111" },
+    "Fruit Cream Specials": { emoji: "🍇", color: "#D4AF37", bg: "#111111" },
+    "Seasonal Specials": { emoji: "🥭", color: "#D4AF37", bg: "#111111" },
+    "Dry Fruit Cream": { emoji: "✨", color: "#D4AF37", bg: "#111111" },
+    "Dry Fruit Shakes": { emoji: "🌰", color: "#D4AF37", bg: "#111111" },
+    "Mocktails": { emoji: "🍹", color: "#D4AF37", bg: "#111111" },
+    "Nice Spl": { emoji: "⭐", color: "#D4AF37", bg: "#111111" },
+    "Lassi": { emoji: "🥛", color: "#D4AF37", bg: "#111111" },
+    "Chat": { emoji: "🍿", color: "#D4AF37", bg: "#111111" },
+    "Grill Sandwich": { emoji: "🥪", color: "#D4AF37", bg: "#111111" },
+    "Shawarma": { emoji: "🌯", color: "#D4AF37", bg: "#111111" },
 }
 
 const isNonVeg = (name: string, category: string) =>
@@ -39,7 +39,7 @@ export default function MenuPage() {
 
     if (!mounted) {
         return (
-            <div style={{ minHeight: '100vh', background: '#FFFDF8' }} />
+            <div style={{ minHeight: '100vh', background: '#0A0A0A' }} />
         )
     }
 
@@ -80,11 +80,11 @@ export default function MenuPage() {
     );
 
     return (
-        <main className="min-h-screen bg-[#FFFDF8] pt-24 relative">
+        <main className="min-h-screen bg-[#0A0A0A] pt-24 relative">
             {/* ── PAGE HERO ── */}
             <section className="relative py-[60px] md:py-[80px] text-center overflow-hidden px-[5%]">
                 <div className="absolute inset-0 pointer-events-none"
-                    style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(249,115,22,0.05) 0%, transparent 65%)" }} />
+                    style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(212,175,55,0.08) 0%, transparent 65%)" }} />
 
                 <div className="relative max-w-7xl mx-auto">
                     {/* ── LEFT FLOATING PHOTOS ── */}
@@ -93,7 +93,7 @@ export default function MenuPage() {
                         <motion.div
                             animate={{ y: [0, -10, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0 }}
-                            className="relative w-40 h-40 rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(249,115,22,0.22)] border-[5px] border-white rotate-[-8deg] ml-8 mt-4"
+                            className="relative w-40 h-40 rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(212,175,55,0.15)] border-[5px] border-[#111111] rotate-[-8deg] ml-8 mt-4"
                         >
                             <Image src="/f1.png" alt="Nice Juice Centre" fill className="object-cover" />
                         </motion.div>
@@ -102,7 +102,7 @@ export default function MenuPage() {
                         <motion.div
                             animate={{ y: [0, -8, 0] }}
                             transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                            className="relative w-32 h-32 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(249,115,22,0.18)] border-[5px] border-white rotate-[6deg] ml-20 -mt-4"
+                            className="relative w-32 h-32 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(212,175,55,0.12)] border-[5px] border-[#111111] rotate-[6deg] ml-20 -mt-4"
                         >
                             <Image src="/f3.png" alt="Nice Juice Centre" fill className="object-cover" />
                         </motion.div>
@@ -111,7 +111,7 @@ export default function MenuPage() {
                         <motion.div
                             animate={{ y: [0, -12, 0] }}
                             transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                            className="relative w-36 h-36 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(249,115,22,0.18)] border-[5px] border-white rotate-[-5deg] ml-4 mt-3"
+                            className="relative w-36 h-36 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(212,175,55,0.12)] border-[5px] border-[#111111] rotate-[-5deg] ml-4 mt-3"
                         >
                             <Image src="/f5.png" alt="Nice Juice Centre" fill className="object-cover" />
                         </motion.div>
@@ -122,7 +122,7 @@ export default function MenuPage() {
                         <motion.div
                             animate={{ y: [0, -10, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                            className="relative w-40 h-40 rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(249,115,22,0.22)] border-[5px] border-white rotate-[8deg] mr-8 mt-4"
+                            className="relative w-40 h-40 rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(212,175,55,0.15)] border-[5px] border-[#111111] rotate-[8deg] mr-8 mt-4"
                         >
                             <Image src="/f2.png" alt="Nice Juice Centre" fill className="object-cover" />
                         </motion.div>
@@ -130,7 +130,7 @@ export default function MenuPage() {
                         <motion.div
                             animate={{ y: [0, -8, 0] }}
                             transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                            className="relative w-32 h-32 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(249,115,22,0.18)] border-[5px] border-white rotate-[-6deg] mr-20 -mt-4"
+                            className="relative w-32 h-32 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(212,175,55,0.12)] border-[5px] border-[#111111] rotate-[-6deg] mr-20 -mt-4"
                         >
                             <Image src="/f4.png" alt="Nice Juice Centre" fill className="object-cover" />
                         </motion.div>
@@ -138,7 +138,7 @@ export default function MenuPage() {
                         <motion.div
                             animate={{ y: [0, -12, 0] }}
                             transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
-                            className="relative w-36 h-36 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(249,115,22,0.18)] border-[5px] border-white rotate-[5deg] mr-4 mt-3"
+                            className="relative w-36 h-36 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(212,175,55,0.12)] border-[5px] border-[#111111] rotate-[5deg] mr-4 mt-3"
                         >
                             <Image src="/f6.png" alt="Nice Juice Centre" fill className="object-cover" />
                         </motion.div>
@@ -150,14 +150,14 @@ export default function MenuPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <span className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 text-[10px] md:text-xs font-bold tracking-widest uppercase mb-6 px-6 py-2.5 rounded-full shadow-sm font-body">
-                            <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
+                        <span className="inline-flex items-center gap-2 bg-[#D4AF37]/10 text-[#D4AF37] text-[10px] md:text-xs font-bold tracking-widest uppercase mb-6 px-6 py-2.5 rounded-full shadow-sm font-body">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
                             Vibrant & Authentic Flavors
                         </span>
-                        <h1 className="text-[clamp(3.5rem,12vw,8rem)] md:text-8xl text-slate-900 mb-6 leading-none font-display font-black tracking-tighter">
-                            Our <span className="text-orange-500">Menu</span>
+                        <h1 className="text-[clamp(3.5rem,12vw,8rem)] md:text-8xl text-white mb-6 leading-none font-display font-black tracking-tighter">
+                            Our <span className="text-[#D4AF37]">Menu</span>
                         </h1>
-                        <p className="text-slate-500 text-base md:text-lg max-w-sm mx-auto font-body">
+                        <p className="text-slate-400 text-base md:text-lg max-w-sm mx-auto font-body">
                             Discover our curated collection of 115+ fresh varieties made with love.
                         </p>
 
@@ -175,8 +175,8 @@ export default function MenuPage() {
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.2 + i * 0.1 }}
                                 >
-                                    <span className="block text-2xl md:text-3xl text-slate-900 font-black font-display tracking-tight">{s.num}</span>
-                                    <span className="block text-slate-400 text-[10px] mt-1 uppercase tracking-widest font-bold font-body">{s.label}</span>
+                                    <span className="block text-2xl md:text-3xl text-white font-black font-display tracking-tight">{s.num}</span>
+                                    <span className="block text-[#D4AF37] text-[10px] mt-1 uppercase tracking-widest font-bold font-body">{s.label}</span>
                                 </motion.div>
                             ))}
                         </div>
@@ -185,15 +185,15 @@ export default function MenuPage() {
             </section>
 
             {/* ── STICKY TABS & FILTERS ── */}
-            <div className="sticky top-[72px] lg:top-[88px] z-40 bg-white/90 backdrop-blur-xl border-b border-orange-100 no-x-scroll">
+            <div className="sticky top-[72px] lg:top-[88px] z-40 bg-[#0A0A0A]/90 backdrop-blur-xl border-b border-[#D4AF37]/20 no-x-scroll">
                 <div className="max-w-7xl mx-auto px-[5%]">
                     {/* Categories */}
                     <div className="flex gap-2 overflow-x-auto py-4 scrollbar-hide font-body">
                         <button
                             onClick={() => setActive("All")}
                             className={`flex-shrink-0 px-6 py-2.5 rounded-full text-sm font-bold tracking-wide transition-all duration-300 min-h-[44px] ${active === "All"
-                                ? "bg-orange-500 text-white shadow-lg shadow-orange-200"
-                                : "text-slate-500 hover:text-orange-500 bg-orange-50/50 hover:bg-orange-50"
+                                ? "bg-[#D4AF37] text-black shadow-lg shadow-[#D4AF37]/20"
+                                : "text-slate-400 hover:text-[#D4AF37] bg-white/5 hover:bg-white/10"
                                 }`}
                         >
                             Everything
@@ -207,8 +207,8 @@ export default function MenuPage() {
                                     key={cat}
                                     onClick={() => setActive(cat)}
                                     className={`flex-shrink-0 flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 min-h-[44px] ${isActive
-                                        ? "text-white shadow-lg"
-                                        : "text-slate-500 hover:text-orange-600 bg-slate-50/50 hover:bg-orange-50/50"
+                                        ? "text-black shadow-lg"
+                                        : "text-slate-400 hover:text-[#D4AF37] bg-white/5 hover:bg-white/10"
                                         }`}
                                     style={{
                                         backgroundColor: isActive ? config.color : undefined,
@@ -223,15 +223,15 @@ export default function MenuPage() {
                     </div>
 
                     {/* Price Filters & Sort */}
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 py-4 border-t border-orange-50 font-body">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 py-4 border-t border-white/10 font-body">
                         <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide py-1">
                             {priceFilters.map((f) => (
                                 <button
                                     key={f.id}
                                     onClick={() => setPriceRange(f.id as any)}
                                     className={`flex-shrink-0 px-4 py-2 rounded-full text-[10px] md:text-xs font-bold transition-all duration-200 border min-h-[44px] ${priceRange === f.id
-                                        ? "bg-[#F97316] text-white border-[#F97316] shadow-md shadow-orange-100"
-                                        : "bg-white text-[#F97316] border-[#F97316]/30 hover:border-[#F97316]"
+                                        ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-md shadow-[#D4AF37]/10"
+                                        : "bg-transparent text-[#D4AF37] border-[#D4AF37]/30 hover:border-[#D4AF37]"
                                         }`}
                                 >
                                     {f.label}
@@ -248,7 +248,7 @@ export default function MenuPage() {
                                 <select
                                     value={sortBy}
                                     onChange={(e) => setSortBy(e.target.value as any)}
-                                    className="bg-white border border-orange-100 text-slate-700 text-xs font-bold rounded-full pl-4 pr-8 py-2 outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all cursor-pointer min-h-[36px]"
+                                    className="bg-[#111111] border border-[#D4AF37]/20 text-white text-xs font-bold rounded-full pl-4 pr-8 py-2 outline-none focus:ring-2 focus:ring-[#D4AF37]/20 focus:border-[#D4AF37] transition-all cursor-pointer min-h-[36px]"
                                 >
                                     <option value="default">Default</option>
                                     <option value="low-high">Price: Low-High</option>
@@ -292,14 +292,14 @@ export default function MenuPage() {
                                                 {config.emoji}
                                             </div>
                                             <div className="flex-1">
-                                                <h2 className="text-2xl md:text-4xl text-slate-900 leading-none mb-1 md:mb-2 font-display font-extrabold tracking-tight">
+                                                <h2 className="text-2xl md:text-4xl text-white leading-none mb-1 md:mb-2 font-display font-extrabold tracking-tight">
                                                     {category}
                                                 </h2>
                                                 <p className="text-slate-400 text-[10px] md:text-sm font-black font-body uppercase tracking-widest">
                                                     {items.length} artisan choices
                                                 </p>
                                             </div>
-                                            <div className="hidden md:block flex-1 h-px bg-gradient-to-r from-slate-100 to-transparent" />
+                                            <div className="hidden md:block flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
                                         </div>
 
                                         {/* ── ITEMS GRID ── */}
@@ -313,7 +313,7 @@ export default function MenuPage() {
                                                         initial={{ opacity: 0, y: 10 }}
                                                         whileInView={{ opacity: 1, y: 0 }}
                                                         viewport={{ once: true }}
-                                                        className="group flex items-center justify-between py-4 md:py-5 border-b border-slate-100 transition-all duration-300 min-h-[64px]"
+                                                        className="group flex items-center justify-between py-4 md:py-5 border-b border-white/5 transition-all duration-300 min-h-[64px]"
                                                     >
                                                         <div className="flex items-center gap-3 md:gap-4 flex-1 min-w-0 pr-4 font-body">
                                                             <div className={`flex-shrink-0 w-3.5 h-3.5 md:w-4 md:h-4 rounded-[4px] border-2 flex items-center justify-center ${nonVeg ? "border-red-500" : "border-green-600"
@@ -325,12 +325,12 @@ export default function MenuPage() {
                                                             <div className="flex flex-col min-w-0">
                                                                 <div className="flex items-center gap-2">
                                                                     <span
-                                                                        className="text-slate-800 text-sm md:text-base font-bold group-hover:text-orange-600 transition-colors duration-200 truncate">
+                                                                        className="text-white/90 text-sm md:text-base font-bold group-hover:text-[#D4AF37] transition-colors duration-200 truncate">
                                                                         {item.name}
                                                                     </span>
                                                                     {item.popular && (
                                                                         <span
-                                                                            className="flex-shrink-0 text-[8px] font-bold px-1.5 py-0.5 rounded-md uppercase tracking-wider bg-orange-100 text-orange-600">
+                                                                            className="flex-shrink-0 text-[8px] font-bold px-1.5 py-0.5 rounded-md uppercase tracking-wider bg-[#D4AF37]/10 text-[#D4AF37]">
                                                                             Popular
                                                                         </span>
                                                                     )}
@@ -346,7 +346,7 @@ export default function MenuPage() {
                                                         <div className="flex-shrink-0 text-right">
                                                             {item.price !== null ? (
                                                                 <span
-                                                                    className="text-base md:text-lg font-bold font-display text-[#F97316] group-hover:scale-110 transition-transform inline-block">
+                                                                    className="text-base md:text-lg font-bold font-display text-[#D4AF37] group-hover:scale-110 transition-transform inline-block">
                                                                     ₹{item.price}
                                                                 </span>
                                                             ) : (
@@ -371,15 +371,15 @@ export default function MenuPage() {
                         >
                             <span className="text-7xl">🍊</span>
                             <div className="max-w-sm">
-                                <h3 className="text-2xl font-display font-extrabold text-slate-800 mb-2">No items in this price range</h3>
-                                <p className="text-slate-500 font-body text-sm mb-8">Try adjusting your filters to discover more fresh delights from our menu.</p>
+                                <h3 className="text-2xl font-display font-extrabold text-white mb-2">No items in this price range</h3>
+                                <p className="text-slate-400 font-body text-sm mb-8">Try adjusting your filters to discover more fresh delights from our menu.</p>
                                 <button
                                     onClick={() => {
                                         setPriceRange('all');
                                         setActive('All');
                                         setSortBy('default');
                                     }}
-                                    className="px-8 py-3 bg-orange-500 text-white font-body font-bold rounded-full shadow-lg shadow-orange-100 hover:bg-orange-600 transition-all active:scale-95 min-h-[44px]"
+                                    className="px-8 py-3 bg-[#D4AF37] text-black font-body font-bold rounded-full shadow-lg shadow-[#D4AF37]/10 hover:bg-[#B8960C] transition-all active:scale-95 min-h-[44px]"
                                 >
                                     Clear All Filters
                                 </button>
@@ -390,24 +390,24 @@ export default function MenuPage() {
 
                 {/* ── BOTTOM CTA ── */}
                 <motion.div
-                    className="mt-20 md:mt-40 rounded-[40px] md:rounded-[60px] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-orange-100/50"
-                    style={{ background: "linear-gradient(135deg, #FFF7ED 0%, #FFFDF8 100%)", border: "1px solid #FFEDD5" }}
+                    className="mt-20 md:mt-40 rounded-[40px] md:rounded-[60px] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-black"
+                    style={{ background: "linear-gradient(135deg, #111111 0%, #0A0A0A 100%)", border: "1px solid rgba(212,175,55,0.2)" }}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
                     <div className="relative z-10">
                         <span className="text-5xl md:text-6xl mb-6 md:mb-8 block">🍊</span>
-                        <h3 className="text-3xl md:text-5xl text-slate-900 mb-6 font-display font-extrabold leading-tight tracking-tight">
-                            Find Your <span className="text-orange-500">Perfect Taste.</span>
+                        <h3 className="text-3xl md:text-5xl text-white mb-6 font-display font-extrabold leading-tight tracking-tight">
+                            Find Your <span className="text-[#D4AF37]">Perfect Taste.</span>
                         </h3>
-                        <p className="text-slate-500 text-base md:text-lg mb-8 md:mb-12 max-w-xl mx-auto font-body">
+                        <p className="text-[#A0A0A0] text-base md:text-lg mb-8 md:mb-12 max-w-xl mx-auto font-body">
                             Our master blenders are ready to help you discover your new favorite selection. Freshness guaranteed in every drop.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center font-body">
                             <a
                                 href="tel:+918639271639"
-                                className="flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-2xl text-sm transition-all shadow-xl shadow-orange-100 min-h-[56px] w-full sm:w-auto">
+                                className="flex items-center justify-center gap-3 bg-[#D4AF37] hover:bg-[#B8960C] text-black font-bold px-8 py-4 rounded-2xl text-sm transition-all shadow-xl shadow-[#D4AF37]/20 min-h-[56px] w-full sm:w-auto">
                                 📞 Secunderabad
                             </a>
                             <a
@@ -418,7 +418,7 @@ export default function MenuPage() {
                         </div>
 
                         {/* Legend */}
-                        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mt-12 md:mt-16 pt-8 md:pt-10 border-t border-orange-100/50">
+                        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mt-12 md:mt-16 pt-8 md:pt-10 border-t border-white/10">
                             <div className="flex items-center gap-3">
                                 <div className="w-3.5 h-3.5 md:w-4 md:h-4 rounded-[4px] border-2 border-green-600 flex items-center justify-center">
                                     <div className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-green-600" />

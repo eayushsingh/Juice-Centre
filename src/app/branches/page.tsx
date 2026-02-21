@@ -8,7 +8,7 @@ const metadata = {
 
 export default function BranchesPage() {
     return (
-        <main className="pt-20">
+        <main className="pt-20 min-h-screen bg-[#050505]">
             <BranchesPreview />
         </main>
     )
