@@ -29,6 +29,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: "Nice Juice Centre – Fresh Since 1986 | Hyderabad",
   description: "Hyderabad's most loved fresh juice destination since 1986. Fresh juices, milkshakes, fruit bowls in Secunderabad and Bandlaguda.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   openGraph: {
     title: "Nice Juice Centre",
     description: "Fresh Since 1986 – Hyderabad's finest juice centre",
