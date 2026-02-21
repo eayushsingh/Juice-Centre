@@ -36,18 +36,18 @@ export default function Navbar() {
                 : "bg-transparent"
                 }`}
         >
-            <div className="max-w-7xl mx-auto h-24 flex items-center justify-between">
+            <div className="max-w-7xl mx-auto h-28 flex items-center justify-between">
                 {/* LEFT — Logo */}
                 <Link href="/" className="flex-shrink-0">
                     <img
                         src="/logo.png"
                         alt="Nice Juice Centre"
                         style={{
-                            height: '80px',
+                            height: '100px',
                             width: 'auto',
                             objectFit: 'contain',
                             display: 'block',
-                            filter: 'brightness(10) saturate(0)',
+                            filter: 'brightness(10) saturate(0) contrast(1.2)',
                             transition: 'transform 0.25s ease',
                         }}
                         onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
