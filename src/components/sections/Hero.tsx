@@ -11,13 +11,7 @@ const fadeUp: any = {
     animate: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
 }
 
-const fruits = [
-    { emoji: "🍊", top: "15%", left: "10%", size: "3rem", delay: 0.2, rotate: -15 },
-    { emoji: "🥭", top: "65%", left: "5%", size: "4rem", delay: 0.4, rotate: 10 },
-    { emoji: "🍋", top: "25%", right: "8%", size: "3.5rem", delay: 0.6, rotate: -10 },
-    { emoji: "🍓", top: "70%", right: "12%", size: "2.5rem", delay: 0.8, rotate: 20 },
-    { emoji: "🥝", top: "10%", right: "20%", size: "2.8rem", delay: 0.5, rotate: 15 },
-]
+
 
 export default function Hero() {
     const [mounted, setMounted] = useState(false)
@@ -41,28 +35,7 @@ export default function Hero() {
                 style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(212,175,55,.1) 1px, transparent 0)', backgroundSize: '40px 40px' }}
             />
 
-            {/* ── FLOATING FRUITS (DESKTOP ONLY) ── */}
-            {fruits.map((f, i) => (
-                <motion.div
-                    key={i}
-                    className="absolute pointer-events-none select-none hidden lg:block"
-                    style={{ top: f.top, left: f.left, right: f.right, fontSize: f.size }}
-                    initial={{ opacity: 0, scale: 0, rotate: f.rotate }}
-                    animate={{ opacity: 0.6, scale: 1, rotate: f.rotate }}
-                    transition={{ delay: f.delay, duration: 0.8, type: "spring", stiffness: 100 }}
-                >
-                    <motion.span
-                        animate={{
-                            y: [0, -15, 0],
-                            rotate: [f.rotate - 5, f.rotate + 5, f.rotate - 5]
-                        }}
-                        transition={{ duration: 4 + i, repeat: Infinity, ease: "easeInOut" }}
-                        style={{ display: "block" }}
-                    >
-                        {f.emoji}
-                    </motion.span>
-                </motion.div>
-            ))}
+
 
             {/* ── MAIN CONTENT ── */}
             <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -143,6 +116,72 @@ export default function Hero() {
                                 <span className="stat-label text-[10px] md:text-xs uppercase tracking-widest text-slate-400 font-bold font-body">{s.label}</span>
                             </div>
                         ))}
+                    </motion.div>
+
+                    {/* ── FRUIT DECORATIONS — visible on ALL screens ── */}
+                    <motion.div
+                        variants={fadeUp}
+                        className="flex justify-center items-center gap-3 flex-wrap mt-6 mb-4"
+                    >
+                        <motion.div
+                            animate={{ y: [0, -8, 0] }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0 }}
+                            className="relative w-16 h-16 md:w-20 md:h-20
+                                       rounded-2xl overflow-hidden flex-shrink-0
+                                       border-2 border-[#D4AF37]/40
+                                       shadow-[0_8px_24px_rgba(212,175,55,0.2)]
+                                       rotate-[-6deg]"
+                        >
+                            <Image src="/f1.png" alt="Fruit" fill className="object-cover" />
+                        </motion.div>
+
+                        <motion.div
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                            className="relative w-14 h-14 md:w-16 md:h-16
+                                       rounded-2xl overflow-hidden flex-shrink-0
+                                       border-2 border-[#D4AF37]/40
+                                       shadow-[0_8px_24px_rgba(212,175,55,0.2)]
+                                       rotate-[4deg]"
+                        >
+                            <Image src="/f3.png" alt="Fruit" fill className="object-cover" />
+                        </motion.div>
+
+                        <motion.div
+                            animate={{ y: [0, -8, 0] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                            className="relative w-16 h-16 md:w-20 md:h-20
+                                       rounded-2xl overflow-hidden flex-shrink-0
+                                       border-2 border-[#D4AF37]/40
+                                       shadow-[0_8px_24px_rgba(212,175,55,0.2)]
+                                       rotate-[-3deg]"
+                        >
+                            <Image src="/f5.png" alt="Fruit" fill className="object-cover" />
+                        </motion.div>
+
+                        <motion.div
+                            animate={{ y: [0, -9, 0] }}
+                            transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                            className="relative w-14 h-14 md:w-16 md:h-16
+                                       rounded-2xl overflow-hidden flex-shrink-0
+                                       border-2 border-[#D4AF37]/40
+                                       shadow-[0_8px_24px_rgba(212,175,55,0.2)]
+                                       rotate-[5deg]"
+                        >
+                            <Image src="/f2.png" alt="Fruit" fill className="object-cover" />
+                        </motion.div>
+
+                        <motion.div
+                            animate={{ y: [0, -8, 0] }}
+                            transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                            className="relative w-16 h-16 md:w-20 md:h-20
+                                       rounded-2xl overflow-hidden flex-shrink-0
+                                       border-2 border-[#D4AF37]/40
+                                       shadow-[0_8px_24px_rgba(212,175,55,0.2)]
+                                       rotate-[-4deg]"
+                        >
+                            <Image src="/f6.png" alt="Fruit" fill className="object-cover" />
+                        </motion.div>
                     </motion.div>
                 </motion.div>
 
