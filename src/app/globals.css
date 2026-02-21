@@ -245,16 +245,16 @@ footer {
   border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
-/* Logo background fix */
+/* Logo */
 img[alt="Nice Juice Centre"] {
-  filter: brightness(0) invert(1);
+  display: block;
 }
 
 /* Mobile size */
 @media (max-width: 768px) {
   img[alt="Nice Juice Centre"] {
-    height: 52px !important;
-    width: 130px !important;
+    height: 56px !important;
+    width: auto !important;
   }
 }
 

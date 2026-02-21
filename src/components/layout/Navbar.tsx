@@ -40,16 +40,13 @@ export default function Navbar() {
                 {/* LEFT — Logo */}
                 <Link href="/" className="flex-shrink-0 flex items-center">
                     <img
-                        src="/logo.png"
+                        src="/logo-gold.png"
                         alt="Nice Juice Centre"
-                        width={180}
-                        height={76}
                         style={{
-                            height: '76px',
-                            width: '180px',
+                            height: '80px',
+                            width: 'auto',
                             objectFit: 'contain',
                             display: 'block',
-                            filter: 'brightness(0) invert(1)',
                             transition: 'transform 0.25s ease',
                         }}
                         onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
