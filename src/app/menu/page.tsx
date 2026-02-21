@@ -86,66 +86,52 @@ export default function MenuPage() {
                 <div className="absolute inset-0 pointer-events-none"
                     style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(212,175,55,0.08) 0%, transparent 65%)" }} />
 
-                <div className="relative max-w-7xl mx-auto">
-                    {/* ── LEFT FLOATING PHOTOS ── */}
-                    <div className="hidden xl:block absolute left-0 top-0 pointer-events-none z-10 w-64 h-full">
-                        {/* Top photo — closest to heading */}
-                        <motion.div
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0 }}
-                            className="relative w-40 h-40 rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(212,175,55,0.15)] border-[5px] border-[#111111] rotate-[-8deg] ml-8 mt-4"
-                        >
-                            <Image src="/f1.png" alt="Nice Juice Centre" fill className="object-cover" />
-                        </motion.div>
+                <div className="relative w-full max-w-4xl mx-auto px-4">
 
-                        {/* Middle photo */}
+                    {/* ── TOP ROW PHOTOS — above heading ── */}
+                    <div className="flex justify-center items-end gap-4 mb-6">
+
                         <motion.div
                             animate={{ y: [0, -8, 0] }}
-                            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                            className="relative w-32 h-32 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(212,175,55,0.12)] border-[5px] border-[#111111] rotate-[6deg] ml-20 -mt-4"
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0 }}
+                            className="relative w-28 h-28 md:w-36 md:h-36
+                                       rounded-2xl overflow-hidden flex-shrink-0
+                                       border-[3px] border-[#D4AF37]/40
+                                       shadow-[0_8px_32px_rgba(212,175,55,0.2)]
+                                       rotate-[-6deg]"
                         >
-                            <Image src="/f3.png" alt="Nice Juice Centre" fill className="object-cover" />
+                            <Image src="/f1.png" alt="Fruit Cream Special" fill className="object-cover" />
                         </motion.div>
 
-                        {/* Bottom photo */}
-                        <motion.div
-                            animate={{ y: [0, -12, 0] }}
-                            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                            className="relative w-36 h-36 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(212,175,55,0.12)] border-[5px] border-[#111111] rotate-[-5deg] ml-4 mt-3"
-                        >
-                            <Image src="/f5.png" alt="Nice Juice Centre" fill className="object-cover" />
-                        </motion.div>
-                    </div>
-
-                    {/* ── RIGHT FLOATING PHOTOS ── */}
-                    <div className="hidden xl:block absolute right-0 top-0 pointer-events-none z-10 w-64 h-full">
                         <motion.div
                             animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                            className="relative w-40 h-40 rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(212,175,55,0.15)] border-[5px] border-[#111111] rotate-[8deg] mr-8 mt-4"
+                            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                            className="relative w-24 h-24 md:w-32 md:h-32
+                                       rounded-2xl overflow-hidden flex-shrink-0
+                                       border-[3px] border-[#D4AF37]/40
+                                       shadow-[0_8px_32px_rgba(212,175,55,0.2)]
+                                       rotate-[4deg]"
                         >
-                            <Image src="/f2.png" alt="Nice Juice Centre" fill className="object-cover" />
+                            <Image src="/f3.png" alt="Dry Fruit Malai" fill className="object-cover" />
                         </motion.div>
 
                         <motion.div
                             animate={{ y: [0, -8, 0] }}
-                            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                            className="relative w-32 h-32 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(212,175,55,0.12)] border-[5px] border-[#111111] rotate-[-6deg] mr-20 -mt-4"
+                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                            className="relative w-28 h-28 md:w-36 md:h-36
+                                       rounded-2xl overflow-hidden flex-shrink-0
+                                       border-[3px] border-[#D4AF37]/40
+                                       shadow-[0_8px_32px_rgba(212,175,55,0.2)]
+                                       rotate-[-3deg]"
                         >
-                            <Image src="/f4.png" alt="Nice Juice Centre" fill className="object-cover" />
+                            <Image src="/f5.png" alt="Mulberry Malai" fill className="object-cover" />
                         </motion.div>
 
-                        <motion.div
-                            animate={{ y: [0, -12, 0] }}
-                            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
-                            className="relative w-36 h-36 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(212,175,55,0.12)] border-[5px] border-[#111111] rotate-[5deg] mr-4 mt-3"
-                        >
-                            <Image src="/f6.png" alt="Nice Juice Centre" fill className="object-cover" />
-                        </motion.div>
                     </div>
 
+                    {/* ── MAIN HEADING — center ── */}
                     <motion.div
-                        className="relative z-0"
+                        className="text-center py-4"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
@@ -181,6 +167,48 @@ export default function MenuPage() {
                             ))}
                         </div>
                     </motion.div>
+
+                    {/* ── BOTTOM ROW PHOTOS — below heading ── */}
+                    <div className="flex justify-center items-start gap-4 mt-6">
+
+                        <motion.div
+                            animate={{ y: [0, -8, 0] }}
+                            transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                            className="relative w-28 h-28 md:w-36 md:h-36
+                                       rounded-2xl overflow-hidden flex-shrink-0
+                                       border-[3px] border-[#D4AF37]/40
+                                       shadow-[0_8px_32px_rgba(212,175,55,0.2)]
+                                       rotate-[5deg]"
+                        >
+                            <Image src="/f2.png" alt="Dry Fruit Cream" fill className="object-cover" />
+                        </motion.div>
+
+                        <motion.div
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+                            className="relative w-24 h-24 md:w-32 md:h-32
+                                       rounded-2xl overflow-hidden flex-shrink-0
+                                       border-[3px] border-[#D4AF37]/40
+                                       shadow-[0_8px_32px_rgba(212,175,55,0.2)]
+                                       rotate-[-4deg]"
+                        >
+                            <Image src="/f4.png" alt="Fruit Cream" fill className="object-cover" />
+                        </motion.div>
+
+                        <motion.div
+                            animate={{ y: [0, -8, 0] }}
+                            transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
+                            className="relative w-28 h-28 md:w-36 md:h-36
+                                       rounded-2xl overflow-hidden flex-shrink-0
+                                       border-[3px] border-[#D4AF37]/40
+                                       shadow-[0_8px_32px_rgba(212,175,55,0.2)]
+                                       rotate-[3deg]"
+                        >
+                            <Image src="/f6.png" alt="Fresh Milkshakes" fill className="object-cover" />
+                        </motion.div>
+
+                    </div>
+
                 </div>
             </section>
 
