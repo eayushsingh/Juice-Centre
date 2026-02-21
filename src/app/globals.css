@@ -247,13 +247,13 @@ footer {
 
 /* Logo background fix */
 img[alt="Nice Juice Centre"] {
-  mix-blend-mode: screen;
+  filter: brightness(1.1);
 }
 
 /* Mobile size */
 @media (max-width: 768px) {
   img[alt="Nice Juice Centre"] {
-    height: 64px !important;
+    height: 48px !important;
   }
 }
 

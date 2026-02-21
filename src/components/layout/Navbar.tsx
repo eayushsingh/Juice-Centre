@@ -43,12 +43,11 @@ export default function Navbar() {
                         src="/logo.png"
                         alt="Nice Juice Centre"
                         style={{
-                            height: '80px',
+                            height: '64px',
                             width: 'auto',
                             objectFit: 'contain',
-                            mixBlendMode: 'screen',
-                            background: 'transparent',
                             display: 'block',
+                            filter: 'brightness(1.1)',
                             transition: 'transform 0.25s ease',
                         } as any}
                         onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
