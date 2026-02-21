@@ -133,7 +133,8 @@ export default function Hero() {
                     </motion.div>
 
                     {/* RIGHT — Mulberry Malai Card */}
-                    <div className="flex justify-center lg:justify-end mt-0 lg:mt-0">
+                    <div className="order-2 lg:order-2 mt-4 lg:mt-0
+                                    flex justify-start lg:justify-end">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -142,14 +143,14 @@ export default function Hero() {
                             <motion.div
                                 animate={{ y: [0, -10, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="w-full max-w-[280px] sm:max-w-[320px]
+                                className="w-[220px] sm:w-[260px] md:w-[300px] lg:w-[320px]
                                            rounded-3xl overflow-hidden
                                            border border-[#D4AF37]/20
                                            shadow-[0_32px_80px_rgba(212,175,55,0.12)]
                                            bg-[#111111]"
                             >
                                 {/* Image */}
-                                <div className="relative w-full h-[280px]">
+                                <div className="relative w-full h-[140px] sm:h-[180px] md:h-[220px] lg:h-[280px]">
                                     <Image
                                         src="/image.png"
                                         alt="Mulberry Malai"
@@ -169,23 +170,23 @@ export default function Hero() {
                                 </div>
 
                                 {/* Info */}
-                                <div className="p-5">
-                                    <h3 className="text-white font-bold text-xl mb-1 font-display">
+                                <div className="p-3 sm:p-4 lg:p-5">
+                                    <h3 className="text-white font-bold text-base sm:text-lg lg:text-xl mb-0.5 font-display">
                                         Mulberry Malai
                                     </h3>
-                                    <p className="text-[#D4AF37] text-xs font-bold tracking-wider mb-3">
+                                    <p className="text-[#D4AF37] text-[10px] sm:text-xs font-bold tracking-wider mb-2">
                                         ⭐ OUR MOST FAMOUS ITEM
                                     </p>
-                                    <p className="text-gray-500 text-xs leading-relaxed mb-4 font-body">
+                                    {/* Description hidden on small mobile — saves space */}
+                                    <p className="hidden sm:block text-gray-500 text-xs leading-relaxed mb-3 font-body">
                                         Our signature bestseller made with fresh
-                                        mulberries and rich premium cream. A unique
-                                        dessert loved since 1986.
+                                        mulberries and rich premium cream.
                                     </p>
-                                    <div className="flex items-center justify-between pt-3 border-t border-white/5">
-                                        <span className="text-[#D4AF37] font-black text-2xl font-display">
+                                    <div className="flex items-center justify-between pt-2 border-t border-white/5">
+                                        <span className="text-[#D4AF37] font-black text-lg sm:text-xl lg:text-2xl font-display">
                                             ₹120
                                         </span>
-                                        <span className="text-xs text-gray-600 border border-gray-800 px-3 py-1 rounded-full">
+                                        <span className="text-[10px] sm:text-xs text-gray-600 border border-gray-800 px-2 sm:px-3 py-1 rounded-full">
                                             Since 1986
                                         </span>
                                     </div>
