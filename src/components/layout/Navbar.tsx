@@ -56,9 +56,10 @@ export default function Navbar() {
                         src="/logo-gold.png"
                         alt="Nice Juice Centre"
                         style={{
-                            width: '140px',
+                            width: '160px',
                             height: 'auto',
                             display: 'block',
+                            minWidth: '160px',
                         }}
                     />
                 </Link>
