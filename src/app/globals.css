@@ -99,11 +99,29 @@ h6 {
   color: var(--primary);
 }
 
-/* Better text rendering */
+/* Better text rendering + GPU acceleration */
 * {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hardware-accelerated elements */
+.will-change-transform {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Smooth hover transitions — GPU only */
+a,
+button,
+[role="button"] {
+  transform: translateZ(0);
+  transition-property: transform, opacity, box-shadow, background-color, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Navbar — no border, uses box-shadow instead */

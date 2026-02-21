@@ -1,3 +1,4 @@
+import React from "react"
 import { Branch } from "@/data/branches"
 
 interface Props {
@@ -5,9 +6,9 @@ interface Props {
     accentColor?: string
 }
 
-export default function BranchCard({ branch, accentColor = "#D4AF37" }: Props) {
+function BranchCard({ branch, accentColor = "#D4AF37" }: Props) {
     return (
-        <div className="bg-[#111111] rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-[#D4AF37]/10 transition-all duration-300 hover:-translate-y-2 group border border-white/5">
+        <div className="bg-[#111111] rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-[#D4AF37]/10 transition-all duration-300 hover:-translate-y-2 group border border-white/5 will-change-transform">
             <div className="h-1.5 w-full" style={{ backgroundColor: accentColor }} />
 
             <div className="p-8">
@@ -57,3 +58,5 @@ export default function BranchCard({ branch, accentColor = "#D4AF37" }: Props) {
         </div>
     )
 }
+
+export default React.memo(BranchCard)

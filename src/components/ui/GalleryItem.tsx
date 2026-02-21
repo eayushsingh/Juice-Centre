@@ -1,3 +1,4 @@
+import React from "react"
 import SafeImage from "./SafeImage"
 import { GalleryImage } from "@/data/gallery"
 
@@ -6,9 +7,9 @@ interface Props {
     className?: string
 }
 
-export default function GalleryItem({ image, className }: Props) {
+function GalleryItem({ image, className }: Props) {
     return (
-        <div className={`group relative overflow-hidden rounded-2xl cursor-pointer ${className}`}>
+        <div className={`group relative overflow-hidden rounded-2xl cursor-pointer will-change-transform ${className}`}>
             <SafeImage
                 src={image.image}
                 alt={image.title}
@@ -29,3 +30,5 @@ export default function GalleryItem({ image, className }: Props) {
         </div>
     )
 }
+
+export default React.memo(GalleryItem)
