@@ -20,10 +20,10 @@ export default function Footer() {
                         <Link href="/" className="inline-block transition-transform duration-300 hover:scale-[1.04]">
                             <div className="relative h-[44px] md:h-[56px] w-[140px] md:w-[180px]">
                                 <Image
-                                    src="/logo.png"
+                                    src="/logo-landscape.png"
                                     alt="Nice Juice Centre"
                                     fill
-                                    className="object-contain filter brightness-0 invert"
+                                    className="object-contain"
                                 />
                             </div>
                         </Link>
