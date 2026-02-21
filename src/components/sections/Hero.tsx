@@ -185,24 +185,24 @@ export default function Hero() {
                     </motion.div>
                 </motion.div>
 
-                {/* Hero Image Section (Desktop Only Visual) */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    className="relative hidden md:block"
-                >
-                    <div className="relative flex items-center justify-center">
-                        <div
-                            className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#D4AF37]/20"
-                            style={{
-                                background: 'linear-gradient(135deg, #111111, #0A0A0A)',
-                                width: '320px',
-                                height: '420px',
-                            }}
+                {/* RIGHT — Mulberry Malai Card — visible on ALL screens */}
+                <div className="w-full lg:w-auto flex-shrink-0">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <motion.div
+                            animate={{ y: [0, -8, 0] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                            className="relative w-full max-w-[280px] mx-auto lg:mx-0
+                                       rounded-3xl overflow-hidden
+                                       border border-[#D4AF37]/30
+                                       shadow-[0_20px_60px_rgba(212,175,55,0.15)]
+                                       bg-[#111111]"
                         >
-                            {/* Product Image */}
-                            <div className="relative w-full h-[260px] overflow-hidden">
+                            {/* Photo */}
+                            <div className="relative w-full h-[220px] sm:h-[260px]">
                                 <Image
                                     src="/image.png"
                                     alt="Mulberry Malai"
@@ -210,67 +210,39 @@ export default function Hero() {
                                     className="object-cover object-center hover:scale-105 transition-transform duration-500"
                                     priority
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent" />
-                            </div>
+                                {/* Gold gradient overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent" />
 
-                            {/* Info Bar */}
-                            <div className="absolute bottom-0 left-0 right-0 bg-[#111111]/95 backdrop-blur-sm px-5 py-4 flex flex-col gap-2">
-                                <div className="flex items-center justify-between">
-                                    <div>
-                                        <div className="font-display font-bold text-white text-base">
-                                            Mulberry Malai
-                                        </div>
-                                        <div className="text-[10px] text-[#D4AF37] font-bold uppercase tracking-wider">
-                                            Our Most Famous Item ⭐
-                                        </div>
-                                    </div>
-                                    <div className="bg-[#D4AF37] text-black text-sm font-bold px-4 py-2 rounded-full shadow-lg shadow-[#D4AF37]/20">
-                                        ₹120
-                                    </div>
+                                {/* Must Try badge */}
+                                <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/40 text-[#D4AF37] text-xs font-bold px-3 py-1.5 rounded-full">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
+                                    Must Try
                                 </div>
-                                <p className="text-[10px] text-slate-400 leading-relaxed font-body">
-                                    Our signature bestseller made with fresh mulberries and rich premium cream. A unique dessert loved by customers since 1986.
+                            </div>
+
+                            {/* Info */}
+                            <div className="p-4">
+                                <h3 className="text-white font-display font-bold text-lg mb-1">
+                                    Mulberry Malai
+                                </h3>
+                                <p className="text-[#D4AF37] text-xs font-bold tracking-wider mb-2">
+                                    ⭐ OUR MOST FAMOUS ITEM
                                 </p>
+                                <p className="text-gray-400 text-xs leading-relaxed mb-3">
+                                    Our signature bestseller made with fresh mulberries and rich premium cream.
+                                </p>
+                                <div className="flex items-center justify-between">
+                                    <span className="text-[#D4AF37] font-display font-black text-xl">
+                                        ₹120
+                                    </span>
+                                    <span className="text-xs text-gray-500 border border-gray-700 px-2 py-1 rounded-full">
+                                        Since 1986
+                                    </span>
+                                </div>
                             </div>
-
-                            {/* Top Badge */}
-                            <div className="absolute top-3 left-3 bg-[#0A0A0A]/90 backdrop-blur-sm text-[#D4AF37] text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm border border-[#D4AF37]/20">
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
-                                Must Try
-                            </div>
-                        </div>
-
-                        {/* Floating fruit cards — hide on mobile, show desktop */}
-                        <div className="hidden lg:block absolute right-[-60px] top-1/2 -translate-y-1/2 z-20">
-                            {/* Fruit card 1 */}
-                            <motion.div
-                                animate={{ y: [0, -20, 0] }}
-                                transition={{ duration: 3.5, repeat: Infinity }}
-                                className="relative w-32 h-32 md:w-36 md:h-36 rounded-3xl overflow-hidden shadow-2xl mb-6 border-4 border-[#111111]"
-                            >
-                                <Image src="/f1.png" alt="Fresh Juice" fill className="object-cover" />
-                            </motion.div>
-
-                            {/* Fruit card 2 */}
-                            <motion.div
-                                animate={{ y: [0, -15, 0] }}
-                                transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-                                className="relative w-28 h-28 md:w-32 md:h-32 rounded-3xl overflow-hidden shadow-2xl ml-8 border-4 border-[#111111]"
-                            >
-                                <Image src="/f2.png" alt="Mulberry" fill className="object-cover" />
-                            </motion.div>
-
-                            {/* Fruit card 3 */}
-                            <motion.div
-                                animate={{ y: [0, -18, 0] }}
-                                transition={{ duration: 3.8, repeat: Infinity, delay: 1 }}
-                                className="relative w-32 h-32 md:w-36 md:h-36 rounded-3xl overflow-hidden shadow-2xl mt-4 border-4 border-[#111111]"
-                            >
-                                <Image src="/f3.png" alt="Mango" fill className="object-cover" />
-                            </motion.div>
-                        </div>
-                    </div>
-                </motion.div>
+                        </motion.div>
+                    </motion.div>
+                </div>
             </div>
         </section>
 
