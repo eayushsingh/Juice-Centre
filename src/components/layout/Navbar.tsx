@@ -26,17 +26,30 @@ export default function Navbar() {
     }, [])
 
     if (!mounted) return (
-        <nav className="fixed top-0 left-0 right-0 h-20 bg-[#0A0A0A] z-50 px-6 md:px-10" />
+        <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, height: '80px', background: '#0A0A0A', zIndex: 50 }} />
     )
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-10 ${scrolled
-                ? "bg-[#0A0A0A]/95 backdrop-blur-md shadow-sm border-b border-[#D4AF37]"
-                : "bg-transparent"
-                }`}
+            style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                zIndex: 50,
+                background: 'rgba(10, 10, 10, 0.97)',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
+                border: 'none',
+                borderBottom: 'none',
+                boxShadow: scrolled ? '0 1px 40px rgba(0,0,0,0.4)' : 'none',
+                height: '80px',
+                display: 'flex',
+                alignItems: 'center',
+                padding: '0 32px',
+            }}
         >
-            <div className="max-w-7xl mx-auto flex items-center justify-between" style={{ minHeight: '120px', display: 'flex', alignItems: 'center', padding: '0 24px' }}>
+            <div className="max-w-7xl mx-auto flex items-center justify-between w-full">
                 {/* LEFT — Logo */}
                 <Link href="/" style={{ flexShrink: 0 }}>
                     <img

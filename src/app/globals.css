@@ -106,11 +106,12 @@ h6 {
   box-sizing: border-box;
 }
 
-/* Navbar */
-nav {
-  background: rgba(10, 10, 10, 0.95) !important;
-  border-bottom: 1px solid var(--primary) !important;
-  backdrop-filter: blur(12px);
+/* Navbar — no border, uses box-shadow instead */
+nav,
+header {
+  border: none !important;
+  border-bottom: none !important;
+  outline: none !important;
 }
 
 /* All orange -> Gold */
