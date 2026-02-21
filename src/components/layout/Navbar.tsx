@@ -38,17 +38,14 @@ export default function Navbar() {
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between" style={{ minHeight: '120px', display: 'flex', alignItems: 'center', padding: '0 24px' }}>
                 {/* LEFT — Logo */}
-                <Link href="/" style={{ flexShrink: 0, display: 'flex', alignItems: 'center' }}>
+                <Link href="/" style={{ flexShrink: 0 }}>
                     <img
                         src="/logo-gold.png"
                         alt="Nice Juice Centre"
                         style={{
-                            height: '120px',
-                            width: '300px',
-                            objectFit: 'contain',
-                            objectPosition: 'left center',
+                            width: '140px',
+                            height: 'auto',
                             display: 'block',
-                            imageRendering: 'crisp-edges',
                         }}
                     />
                 </Link>
