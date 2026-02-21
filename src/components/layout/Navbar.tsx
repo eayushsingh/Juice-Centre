@@ -36,16 +36,17 @@ export default function Navbar() {
                 : "bg-transparent"
                 }`}
         >
-            <div className="max-w-7xl mx-auto flex items-center justify-between" style={{ height: '80px' }}>
+            <div className="max-w-7xl mx-auto flex items-center justify-between" style={{ height: '100px' }}>
                 {/* LEFT — Logo */}
                 <Link href="/" className="flex-shrink-0 flex items-center">
                     <img
                         src="/logo-gold.png"
                         alt="Nice Juice Centre"
                         style={{
-                            height: '80px',
-                            width: 'auto',
+                            height: '90px',
+                            width: '220px',
                             objectFit: 'contain',
+                            objectPosition: 'left center',
                             display: 'block',
                             transition: 'transform 0.25s ease',
                         }}
