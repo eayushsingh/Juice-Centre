@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -52,10 +53,13 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto flex items-center justify-between w-full">
                 {/* LEFT — Logo */}
                 <Link href="/" className="flex items-center flex-shrink-0">
-                    <img
-                        src="/logo-landscape.png"
+                    <Image
+                        src="/logo-landscape.webp"
                         alt="Nice Juice Centre"
-                        className="h-auto w-[100px] sm:w-[120px] md:w-[150px] lg:w-[180px] xl:w-[200px] block"
+                        width={200}
+                        height={83}
+                        priority
+                        className="h-auto w-[100px] sm:w-[120px] md:w-[150px] lg:w-[180px] xl:w-[200px]"
                     />
                 </Link>
 

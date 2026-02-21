@@ -100,7 +100,7 @@ export default function MenuPage() {
                                        shadow-[0_8px_32px_rgba(212,175,55,0.2)]
                                        rotate-[-6deg]"
                         >
-                            <Image src="/f1.png" alt="Fruit Cream Special" fill className="object-cover" />
+                            <Image src="/f1.webp" alt="Fruit Cream Special" fill className="object-cover" />
                         </motion.div>
 
                         <motion.div
@@ -112,7 +112,7 @@ export default function MenuPage() {
                                        shadow-[0_8px_32px_rgba(212,175,55,0.2)]
                                        rotate-[4deg]"
                         >
-                            <Image src="/f3.png" alt="Dry Fruit Malai" fill className="object-cover" />
+                            <Image src="/f3.webp" alt="Dry Fruit Malai" fill className="object-cover" />
                         </motion.div>
 
                         <motion.div
@@ -124,7 +124,7 @@ export default function MenuPage() {
                                        shadow-[0_8px_32px_rgba(212,175,55,0.2)]
                                        rotate-[-3deg]"
                         >
-                            <Image src="/f5.png" alt="Mulberry Malai" fill className="object-cover" />
+                            <Image src="/f5.webp" alt="Mulberry Malai" fill className="object-cover" />
                         </motion.div>
 
                     </div>
@@ -180,7 +180,7 @@ export default function MenuPage() {
                                        shadow-[0_8px_32px_rgba(212,175,55,0.2)]
                                        rotate-[5deg]"
                         >
-                            <Image src="/f2.png" alt="Dry Fruit Cream" fill className="object-cover" />
+                            <Image src="/f2.webp" alt="Dry Fruit Cream" fill className="object-cover" />
                         </motion.div>
 
                         <motion.div
@@ -192,7 +192,7 @@ export default function MenuPage() {
                                        shadow-[0_8px_32px_rgba(212,175,55,0.2)]
                                        rotate-[-4deg]"
                         >
-                            <Image src="/f4.png" alt="Fruit Cream" fill className="object-cover" />
+                            <Image src="/f4.webp" alt="Fruit Cream" fill className="object-cover" />
                         </motion.div>
 
                         <motion.div
@@ -204,7 +204,7 @@ export default function MenuPage() {
                                        shadow-[0_8px_32px_rgba(212,175,55,0.2)]
                                        rotate-[3deg]"
                         >
-                            <Image src="/f6.png" alt="Fresh Milkshakes" fill className="object-cover" />
+                            <Image src="/f6.webp" alt="Fresh Milkshakes" fill className="object-cover" />
                         </motion.div>
 
                     </div>

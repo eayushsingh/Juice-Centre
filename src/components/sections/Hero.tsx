@@ -152,7 +152,7 @@ export default function Hero() {
                                 {/* Image */}
                                 <div className="relative w-full h-[140px] sm:h-[180px] md:h-[220px] lg:h-[280px]">
                                     <Image
-                                        src="/image.png"
+                                        src="/image.webp"
                                         alt="Mulberry Malai"
                                         fill
                                         priority

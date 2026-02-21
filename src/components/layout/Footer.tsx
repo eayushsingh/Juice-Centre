@@ -20,7 +20,7 @@ export default function Footer() {
                         <Link href="/" className="inline-block transition-transform duration-300 hover:scale-[1.04]">
                             <div className="relative h-[44px] md:h-[56px] w-[140px] md:w-[180px]">
                                 <Image
-                                    src="/logo-landscape.png"
+                                    src="/logo-landscape.webp"
                                     alt="Nice Juice Centre"
                                     fill
                                     className="object-contain"

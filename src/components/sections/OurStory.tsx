@@ -21,7 +21,7 @@ export default function OurStory() {
                         >
                             {/* Main store image */}
                             <Image
-                                src="/image copy.png"
+                                src="/image copy.webp"
                                 alt="Nice Juice Centre Store"
                                 fill
                                 className="object-cover object-top"
